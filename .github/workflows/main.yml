@@ -7,7 +7,7 @@ jobs:
   tests:
     strategy:
       matrix:
-        python-version: ["3.9", "3.10"]
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
     runs-on: ubuntu-latest
     services:
       postgres:
@@ -171,6 +171,6 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         format: markdown
         message: |
-          Деплой кошек успешно завершен!
-          Коммит выполнил @${{ github.actor }}
+          Деплой завершен!
           Сообщение коммита: ${{ github.event.commits[0].message }}
+          Коммит выполнил @${{ github.actor }}
