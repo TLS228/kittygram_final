@@ -169,5 +169,4 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        format: markdown
         message: "Деплой выполенен! Запушил: ${{ github.actor }}"
