@@ -170,7 +170,4 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         format: markdown
-        message: |
-          Деплой завершен!
-          Сообщение коммита: ${{ github.event.commits[0].message }}
-          Коммит выполнил @${{ github.actor }}
+        message: "Деплой выполенен! Запушил: ${{ github.actor }}"
